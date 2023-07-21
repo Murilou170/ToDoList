@@ -1,0 +1,15 @@
+<h1>Lista de Tarefas</h1>
+
+<ul>
+  <% @tasks.each do |task| %>
+    <li>
+      <%= link_to task.title, task %>
+      (Concluída: <%= task.completed? ? 'Sim' : 'Não' %>)
+
+      <!-- Adicione o link para excluir a tarefa -->
+      <%= link_to 'Excluir', task_path(task), method: :delete, data: { confirm: 'Tem certeza que deseja excluir esta tarefa?' } %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'Criar Nova Tarefa', new_task_path %>
