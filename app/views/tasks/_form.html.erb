@@ -1,21 +1,20 @@
-<%= form_with(model: task) do |form| %>
-    <div>
-      <%= form.label :title %>
-      <%= form.text_field :title %>
-    </div>
-  
-    <div>
-      <%= form.label :description %>
-      <%= form.text_area :description %>
-    </div>
-  
-    <div>
-      <%= form.label :completed %>
-      <%= form.check_box :completed %>
-    </div>
-  
-    <div>
-      <%= form.submit %>
-    </div>
-  <% end %>
-  
+<%= form_with(model: task, class: "my-form") do |form| %>
+  <div class="form-group">
+    <%= form.label :Título %>
+    <%= form.text_field :title, class: "form-control rounded" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :Descrição %>
+    <%= form.text_area :description, class: "form-control rounded" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :Completa %>
+    <%= form.check_box :completed, class: "form-check-input" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.submit "Salvar", class: "btn btn-primary" %>
+  </div>
+<% end %>

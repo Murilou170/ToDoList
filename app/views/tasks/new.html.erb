@@ -1,5 +1,24 @@
-<h1>Nova Tarefa</h1>
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Criar nova tarefa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <div class="col-md-8 mx-auto">
+        <div class="p-4 p-md-5 border rounded bg-light">
+          <h1 class="mb-4">Criar Nova Tarefa</h1>
 
-<%= render 'form', task: @task %>
+          <%= render 'form', task: @task %>
 
-<%= link_to 'Voltar à Lista', tasks_path %>
+          <%= link_to 'Voltar à Lista', tasks_path, class: "btn btn-secondary mt-3" %> <!-- Estiliza o botão Voltar à Lista -->
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+</html>
